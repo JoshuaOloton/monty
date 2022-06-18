@@ -37,7 +37,10 @@ void push(stack_t **top, unsigned int line_no)
 	arg = atoi(mnt.arg);
 	temp = malloc(sizeof(stack_t));
 	if (temp == NULL)
-		return;
+	{
+		fprintf(stderr, "Error: malloc failed\n");
+		exit(EXIT_FAILURE);
+	}
 	temp->n = arg;
 	temp->prev = NULL;
 	t = *top;
