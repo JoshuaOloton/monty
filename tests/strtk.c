@@ -20,7 +20,10 @@ int main(int argc, char *argv[])
 	{
                token = strtok(str1, argv[2]);
                if (token == NULL)
-                   break;
+		{ 
+			printf("Found null\n");
+                   	break;
+		}
                printf("%d: %s\n", j, token);
 	}
 

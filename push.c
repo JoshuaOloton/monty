@@ -10,15 +10,31 @@
 void push(stack_t **top, unsigned int line_no)
 {
 	stack_t *temp, *t;
-	int arg;
+	int arg, i;
 
-	arg = atoi(mnt.arg);
-	if (arg == 0)
+	if (mnt.arg == NULL)
 	{
-		fprintf(stderr, "L%d: usage: push integer", line_no);
+		fprintf(stderr, "L%d: usage: push integer\n", line_no);
+		free(mnt.line);
+		_free(*top);
+		fclose(mnt.file);
 		exit(EXIT_FAILURE);
 	}
-
+	i = 0;
+	if (mnt.arg[0] == '-')
+		i++;
+	for (; mnt.arg[i] && mnt.arg[i] != '\n'; i++)
+	{
+		if (mnt.arg[i] < 48 || mnt.arg[i] > 57)
+		{
+			fprintf(stderr, "L%d: usage: push integer\n", line_no);
+			free(mnt.line);
+			_free(*top);
+			fclose(mnt.file);
+			exit(EXIT_FAILURE);
+		}
+	}
+	arg = atoi(mnt.arg);
 	temp = malloc(sizeof(stack_t));
 	if (temp == NULL)
 		return;
