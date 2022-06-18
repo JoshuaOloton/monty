@@ -10,7 +10,7 @@
 void push(stack_t **top, unsigned int line_no)
 {
 	stack_t *temp, *t;
-	int arg, i;
+	int arg, i = 0;
 
 	if (mnt.arg == NULL)
 	{
@@ -20,7 +20,6 @@ void push(stack_t **top, unsigned int line_no)
 		fclose(mnt.file);
 		exit(EXIT_FAILURE);
 	}
-	i = 0;
 	if (mnt.arg[0] == '-')
 		i++;
 	for (; mnt.arg[i] && mnt.arg[i] != '\n'; i++)
@@ -46,8 +45,6 @@ void push(stack_t **top, unsigned int line_no)
 	t = *top;
 	temp->next = t;
 	if (t)
-	{
 		t->prev = temp;
-	}
 	*top = temp;
 }

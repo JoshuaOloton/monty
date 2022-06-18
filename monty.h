@@ -61,4 +61,5 @@ void _free(stack_t *top);
 int exec(char *line, stack_t **stack, unsigned int line_no, FILE *file);
 void push(stack_t **top, unsigned int line_no);
 void pall(stack_t **top, unsigned int line_no);
+void pint(stack_t **top, unsigned int line_no);
 #endif /* monty.h */
