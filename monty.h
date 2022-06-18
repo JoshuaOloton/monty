@@ -64,4 +64,5 @@ void pall(stack_t **top, unsigned int line_no);
 void pint(stack_t **top, unsigned int line_no);
 void pop(stack_t **top, unsigned int line_no);
 void swap(stack_t **top, unsigned int line_no);
+void add(stack_t **top, unsigned int line_no);
 #endif /* monty.h */
