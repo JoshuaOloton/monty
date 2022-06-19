@@ -18,6 +18,11 @@ void m_div(stack_t **top, unsigned int line_no)
 		fprintf(stderr, "L%d: can't div, stack too short\n", line_no);
 		exit(EXIT_FAILURE);
 	}
+	if ((*top)->n == 0)
+	{
+		fprintf(stderr, "L%d: division by zero\n", line_no);
+		exit(EXIT_FAILURE);
+	}
 	temp = *top;
 	data = temp->n;
 	(*top) = (*top)->next;
