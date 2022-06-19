@@ -67,6 +67,8 @@ void swap(stack_t **top, unsigned int line_no);
 void add(stack_t **top, unsigned int line_no);
 void nop(stack_t **top __attribute__((unused)), unsigned int line_no __attribute__((unused)));
 void sub(stack_t **top, unsigned int line_no);
+void mul(stack_t **top, unsigned int line_no);
+void m_div(stack_t **top, unsigned int line_no);
 void mod(stack_t **top, unsigned int line_no);
 void pchar(stack_t **top, unsigned int line_no);
 void pstr(stack_t **top, unsigned int line_no);

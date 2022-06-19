@@ -18,6 +18,6 @@ void pchar(stack_t **top, unsigned int line_no)
 	{
 		fprintf(stderr, "L%d: can't pchar, value out of range\n", line_no);
 		exit(EXIT_FAILURE);
-	}	
+	}
 	printf("%c\n", (*top)->n);
 }

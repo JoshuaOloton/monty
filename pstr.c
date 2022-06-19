@@ -15,6 +15,8 @@ void pstr(stack_t **top __attribute__((unused)), unsigned int line_no
 
 	while (t)
 	{
+		if (t->n <= 0 || t->n > 127)
+			break;
 		printf("%c", t->n);
 		t = t->next;
 	}

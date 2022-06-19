@@ -14,6 +14,7 @@ int exec(char *line, stack_t **stack, unsigned int line_no, FILE *file)
 				{"pint", pint}, {"pop", pop},
 				{"swap", swap}, {"add", add},
 				{"nop", nop}, {"sub", sub},
+				{"mul", mul}, {"div", m_div},
 				{"mod", mod}, {"pchar", pchar},
 				{"pstr", pstr},
 				{NULL, NULL}};
