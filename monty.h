@@ -66,4 +66,5 @@ void pop(stack_t **top, unsigned int line_no);
 void swap(stack_t **top, unsigned int line_no);
 void add(stack_t **top, unsigned int line_no);
 void nop(stack_t **top __attribute__((unused)), unsigned int line_no __attribute__((unused)));
+void sub(stack_t **top, unsigned int line_no);
 #endif /* monty.h */
