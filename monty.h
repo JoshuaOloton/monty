@@ -60,9 +60,10 @@ typedef struct instruction_s
 void _free(stack_t *top);
 int exec(char *line, stack_t **stack, unsigned int line_no, FILE *file);
 void push(stack_t **top, unsigned int line_no);
-void pall(stack_t **top, unsigned int line_no);
+void pall(stack_t **top, unsigned int line_no  __attribute__((unused)));
 void pint(stack_t **top, unsigned int line_no);
 void pop(stack_t **top, unsigned int line_no);
 void swap(stack_t **top, unsigned int line_no);
 void add(stack_t **top, unsigned int line_no);
+void nop(stack_t **top __attribute__((unused)), unsigned int line_no __attribute__((unused)));
 #endif /* monty.h */
