@@ -9,7 +9,7 @@
  */
 void pchar(stack_t **top, unsigned int line_no)
 {
-	if (mnt.arg[i] < 0 || mnt.arg[i] > 127)
+	if ((*top)->n < 0 || (*top)->n > 127)
 	{
 		fprintf(stderr, "L%d: can't pchar, value out of range\n", line_no);
 		exit(EXIT_FAILURE);

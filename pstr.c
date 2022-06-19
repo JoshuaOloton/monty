@@ -8,7 +8,8 @@
  *
  * Return: void
  */
-void pstr(stack_t **top, unsigned int line_no)
+void pstr(stack_t **top __attribute__((unused)), unsigned int line_no
+	__attribute__((unused)))
 {
 	stack_t *t;
 
