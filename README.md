@@ -99,3 +99,20 @@ pcx
 $ ./monty errorfile.m
 1
 L3: unknown instruction pcx
+
+### Return value
+When there is no errors, `monty` returns `0`. Otherwise, returns `1`
+
+## Authors
+<details>
+ <summary>Joshua Oloton</summary>
+ <ul>
+ <li><a href="https://www.github.com/JoshuaOloton">Github</a></li>
+ </ul>
+</details>
+<details>
+ <summary>Babaferi Vivian</summary>
+ <ul>
+ <li><a href="https://github.com/Evusviv">Github</a></li>
+ </ul>
+</details>
