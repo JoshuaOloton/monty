@@ -16,7 +16,8 @@ int exec(char *line, stack_t **stack, unsigned int line_no, FILE *file)
 				{"nop", nop}, {"sub", sub},
 				{"mul", mul}, {"div", m_div},
 				{"mod", mod}, {"pchar", pchar},
-				{"pstr", pstr},
+				{"pstr", pstr}, {"rotl", rotl},
+				{"rotr", rotr},
 				{NULL, NULL}};
 	unsigned int i = 0;
 	char *op;
