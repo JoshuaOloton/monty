@@ -72,4 +72,6 @@ void m_div(stack_t **top, unsigned int line_no);
 void mod(stack_t **top, unsigned int line_no);
 void pchar(stack_t **top, unsigned int line_no);
 void pstr(stack_t **top, unsigned int line_no);
+void rotl(stack_t **top, unsigned int line_no __attribute__((unused)));
+void rotr(stack_t **top, unsigned int line_no __attribute__((unused)));
 #endif /* monty.h */
