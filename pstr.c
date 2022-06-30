@@ -8,11 +8,16 @@
  *
  * Return: void
  */
-void pstr(stack_t **top __attribute__((unused)), unsigned int line_no
-	__attribute__((unused)))
+void pstr(stack_t **top, unsigned int line_no)
 {
 	stack_t *t;
 
+	if ((*top) == NULL)
+	{
+		fprintf(stderr, "L%d: can't pchar, stack empty\n", line_no);
+		exit(EXIT_FAILURE);
+	}
+	t = (*top);
 	while (t)
 	{
 		if (t->n <= 0 || t->n > 127)
